@@ -1,0 +1,325 @@
+/* src/componentes/PedidoForm.css */
+
+/* Contenedor principal */
+.pedido-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%); /* Verde azulado */
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.pedido-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+.pedido-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 25px rgba(13, 148, 136, 0.2); /* Sombra verde */
+}
+
+.header-icon svg {
+  width: 35px;
+  height: 35px;
+  color: #0d9488; /* Verde azulado oscuro */
+}
+
+.pedido-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(13, 148, 136, 0.3);
+}
+
+.pedido-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Tarjeta del formulario */
+.pedido-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
+  overflow: hidden;
+}
+
+.card-header {
+  height: 6px;
+  background: linear-gradient(90deg, #2dd4bf, #0d9488); /* Verde azulado */
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Grupos de formulario */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #e53e3e;
+  margin-left: 2px;
+}
+
+/* Input wrapper para iconos */
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  width: 18px;
+  height: 18px;
+}
+
+/* Estilos para inputs */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+.form-input:hover {
+  border-color: #99f6e4; /* Verde azulado claro */
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0d9488; /* Verde azulado oscuro */
+  background: white;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+.form-input::placeholder {
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+/* Grid para métodos de pago */
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Opciones de pago tipo tarjeta */
+.payment-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.payment-option:hover {
+  border-color: #2dd4bf; /* Verde azulado medio */
+  background: #f0fdfa; /* Fondo muy claro verde */
+  transform: translateY(-2px);
+}
+
+.payment-option.selected {
+  border-color: #0d9488; /* Verde azulado oscuro */
+  background: #ccfbf1; /* Fondo verde muy claro */
+  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
+}
+
+.payment-option input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.payment-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.payment-option.selected .payment-label {
+  color: #0d9488; /* Verde azulado oscuro */
+  font-weight: 600;
+}
+
+/* Textarea */
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #0d9488; /* Verde azulado oscuro */
+  background: white;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+/* Botón de envío */
+.btn-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%); /* Verde azulado */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  box-shadow: 0 10px 20px rgba(13, 148, 136, 0.3);
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(13, 148, 136, 0.4);
+}
+
+.btn-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+/* Spinner para loading */
+.spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 0.75rem;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Texto de campos obligatorios */
+.required-note {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.required-note .required {
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pedido-header h1 {
+    font-size: 2rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pedido-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Estilo especial para dirección (opcional) */
+.form-group:nth-child(3) .form-input {
+  border-left-width: 4px;
+  border-left-color: #2dd4bf;
+}
