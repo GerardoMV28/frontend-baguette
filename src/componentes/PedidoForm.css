@@ -3,7 +3,7 @@
 /* Contenedor principal */
 .pedido-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%); /* Verde azulado */
+  background: linear-gradient(135deg, #0fa491 0%, #056d64 100%); /* Verde azulado */
   padding: 2rem 1rem;
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
@@ -61,7 +61,7 @@
 
 .card-header {
   height: 6px;
-  background: linear-gradient(90deg, #2dd4bf, #0d9488); /* Verde azulado */
+  background: linear-gradient(90deg, #13ab96, #056c64); /* Verde azulado */
 }
 
 .card-body {
@@ -120,13 +120,13 @@
 }
 
 .form-input:hover {
-  border-color: #99f6e4; /* Verde azulado claro */
+  border-color: #3dcaae; /* Verde azulado claro */
   background: white;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #0d9488; /* Verde azulado oscuro */
+  border-color: #049488; /* Verde azulado oscuro */
   background: white;
   box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
 }
@@ -160,13 +160,13 @@
 }
 
 .payment-option:hover {
-  border-color: #2dd4bf; /* Verde azulado medio */
+  border-color: #12b29c; /* Verde azulado medio */
   background: #f0fdfa; /* Fondo muy claro verde */
   transform: translateY(-2px);
 }
 
 .payment-option.selected {
-  border-color: #0d9488; /* Verde azulado oscuro */
+  border-color: #076f67; /* Verde azulado oscuro */
   background: #ccfbf1; /* Fondo verde muy claro */
   box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
 }
@@ -190,7 +190,7 @@
 }
 
 .payment-option.selected .payment-label {
-  color: #0d9488; /* Verde azulado oscuro */
+  color: #06756c; /* Verde azulado oscuro */
   font-weight: 600;
 }
 
@@ -222,7 +222,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%); /* Verde azulado */
+  background: linear-gradient(135deg, #0c8c7b 0%, #066b63 100%); /* Verde azulado */
   color: white;
   border: none;
   border-radius: 12px;

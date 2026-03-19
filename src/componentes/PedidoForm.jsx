@@ -265,7 +265,7 @@ function PedidoForm() {
                 </div>
               </div>
 
-              {/* Botón */}
+            {/* Botón */}
               <button
                 type="submit"
                 disabled={loading}
